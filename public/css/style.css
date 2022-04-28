@@ -39,6 +39,10 @@ a{
         text-transform: uppercase;
     }
 
+    .navbar .hamburger{
+        display: none;
+    }
+
     .barre{
         display: flex;
         background-color: #ffefda;
@@ -58,4 +62,62 @@ a{
     }
 
     
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    
+    header{
+        background-color: rgba(102, 102, 102, 0.102);
+        height: 5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    header .logo{
+        font-size: 30px;
+    }
+
+    header .navbar ul{
+        display: none;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .navbar ul li{
+        padding: 1rem;
+        color: black;
+    }
+
+    header .navbar ul li a{
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .navbar .hamburger{
+        margin-left: 20rem;
+    }
+
+    .fa-bars{
+        font-size: 25px;
+    }
+
+    .barre{
+        display: flex;
+        background-color: #ffefda;
+        height: 3rem;
+    }
+
+    .barre .recherche{
+
+    }
+
+    .banniere{
+        background-image: url("../images/baniere.webp");
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
 }

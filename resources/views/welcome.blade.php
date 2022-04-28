@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{ asset('logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>LaFrancoise221</title>
 </head>
 <body>
@@ -16,7 +17,12 @@
         </div>
 
         <div class="navbar">
-            <ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+
+            <ul id="item">
                 <li>
                     <a href="">Accueil</a>
                 </li>
@@ -59,6 +65,6 @@
     </div>
 
     
-    
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
