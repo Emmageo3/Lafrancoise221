@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    header{
+        background-color: rgba(102, 102, 102, 0.102);
+    }
+    
+    header .logo{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    header .navbar ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .navbar ul li{
+        padding: 1rem;
+        color: black;
+    }
+
+    header .navbar ul li a{
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .barre{
+        display: flex;
+        background-color: #ffefda;
+        height: 3rem;
+    }
+
+    .barre .recherche{
+
+    }
+
+    .banniere{
+        background-image: url("../images/baniere.webp");
+        height: 45rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    
+}
