@@ -13,7 +13,7 @@
 
     <header>
         <div class="logo">
-            La françoise
+            La françoise 
         </div>
 
         <div class="navbar">
@@ -63,6 +63,10 @@
     <div class="banniere">
         
     </div>
+
+    <section class="categories">
+        
+    </section>
 
     
     <script src="{{ asset('js/script.js') }}"></script>
