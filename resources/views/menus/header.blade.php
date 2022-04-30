@@ -53,9 +53,14 @@
 
     <div class="barre">
         <div class="recherche">
-            <a href="">Barre de recherche</a>
+            <form action="">
+                <input type="text" name="" id="">
+                <input type="submit" name="rechercher" id="" value="rechercher">
+            </form>
         </div>
         <div class="panier">
-            <a href="">Panier</a>
+            <a href="{{ route('panier') }}" style="color: black; font-size: 20px;">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>(5)
+            </a>
         </div>
     </div>

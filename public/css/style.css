@@ -61,6 +61,14 @@ a{
         background-position: center center;
     }
 
+    /*---------------connexion----------------*/
+
+    .connexion .form{
+        
+        width: 300px;
+        background-color: aliceblue;
+    }
+
     
 }
 
@@ -120,4 +128,10 @@ a{
         background-size: cover;
         background-position: center center;
     }
+
+    .panier a .fa-basket-shopping{
+        background-color: black;
+    }
+
+    
 }
