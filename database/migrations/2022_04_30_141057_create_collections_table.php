@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('collections', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_collection');
             $table->timestamps();
         });
     }

@@ -1,57 +1,68 @@
 @include('menus.header')
 
-    <section class="connexion" style="height: 600px" >
+    <section class="connexion" >
 
     
         <!-- Session Status -->
-        <div class="mb-4" :status="session('status')"> </div>
+        <div :status="session('status')"> </div>
 
         <!-- Validation Errors -->
-        <div class="mb-4" :errors="$errors"> </div>
+        <div :errors="$errors"> </div>
 
-        <form method="POST" action="{{ route('login') }}" style="margin: auto; width: 50%; padding: 150px; text-align: center;background-color: rgba(102, 102, 102, 0.102); margin-top: 50px">
+        <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <!-- Email Address -->
             <div>
-                <label for="email" :value="__('Email')" style="font-size: 20px"> <i class="fa fa-envelope" aria-hidden="true"></i>
+                <label for="email" :value="__('Email')"> <i class="fa fa-envelope" aria-hidden="true"></i>
                     Adresse email</label><br>
 
-                <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus style="padding: 50px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 2rem"/>
+                <input id="email" type="email" name="email" :value="old('email')" required autofocus/>
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <label for="password" :value="__('Password')" style="font-size: 20px" ><i class="fa fa-key" aria-hidden="true"></i>
+                <label for="password" :value="__('Password')"><i class="fa fa-key" aria-hidden="true"></i>
                     Mot de passe</label><br>
 
-                <input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" style="padding: 50px; padding-top: 10px; padding-bottom: 10px"/>
+                <input id="password" type="password" name="password" required autocomplete="current-password"/>
             </div>
 
             <!-- Remember Me -->
-            <div class="block" style="margin-top: 1rem">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Se souvenir de moi') }}</span>
-                </label>
+            <div>
+
+                <label for="remember_me">
+                    <input id="remember_me" type="checkbox" name="remember">
+                    <span>{{ __('Se souvenir de moi') }}</span>
+                </label> <br>
+
+                <button>
+                    {{ __('Se connecter') }}
+                </button> <br>
+
+                
             </div>
 
-            <div class="flex items-center justify-end mt-4" style="margin-top: 1rem">
+            <div class="oublie">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a href="{{ route('password.request') }}">
                         {{ __('Mot de passe oublié ?') }}
                     </a>
                 @endif
 
-                <button class="ml-3" style="padding: 1rem; border-radius: 1rem; background-color: black; color: white">
-                    {{ __('Se connecter') }}
-                </button>
+                
+            </div>
+
+            <!-- s'inscrire -->
+            <div class="inexistant">
+                <label for="inscription">
+                    <a href="{{ route('register') }}">Vous n'avez pas de compte ? veuillez vous inscrire</a>
+                </label>
             </div>
         </form>
 
     </section>
+
+@include('menus.footer')
 
     

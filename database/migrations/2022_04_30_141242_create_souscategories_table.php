@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('souscategories', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_sous_categorie');
+            $table->foreignId('categorie_id')
+            ->constrained()
+            ->onUpdate('restrict')
+            ->onDelete('restrict');
             $table->timestamps();
         });
     }

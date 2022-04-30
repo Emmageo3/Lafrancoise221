@@ -13,8 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('article_commandes', function (Blueprint $table) {
             $table->id();
+            $table->integer('quantite_article_commande');
+            $table->integer('total');
+            $table->foreignId('commande_id')
+            ->constrained()
+            ->onUpdate('restrict')
+            ->onDelete('restrict');
             $table->timestamps();
         });
     }

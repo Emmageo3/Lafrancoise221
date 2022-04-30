@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('commentaires', function (Blueprint $table) {
             $table->id();
+            $table->text('texte');
+            $table->foreignId('user_id')
+            ->constrained()
+            ->onUpdate('restrict')
+            ->onDelete('restrict');
             $table->timestamps();
         });
     }

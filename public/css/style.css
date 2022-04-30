@@ -39,6 +39,25 @@ a{
         text-transform: uppercase;
     }
 
+    footer  ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffefda;
+        margin-top: 50px;
+    }
+
+    footer  ul li{
+        padding: 1rem;
+        color: black;
+    }
+
+    footer  ul li a{
+        color: black;
+        text-transform: uppercase;
+    }
+
     .navbar .hamburger{
         display: none;
     }
@@ -63,12 +82,106 @@ a{
 
     /*---------------connexion----------------*/
 
-    .connexion .form{
-        
-        width: 300px;
-        background-color: aliceblue;
+
+    .connexion form{
+        margin: auto; 
+        width: 50%; 
+        padding: 150px; 
+        text-align: center;
+        background-color: rgba(102, 102, 102, 0.102); 
+        margin-top: 50px;
     }
 
+    .connexion form label{
+        font-size: 20px;
+    }
+
+    .connexion form input{
+        padding: 90px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .connexion form button{
+        padding: 1rem; 
+        border-radius: 10px; 
+        background-color: black; 
+        color: white;
+    }
+
+    .connexion form .oublie{
+        margin-top: 10px;
+    }
+
+    .connexion form .oublie a{
+        color: black;
+    }
+
+    .connexion form .inexistant {
+        margin-top: 10px;
+    }
+
+    .connexion form .inexistant a{
+        color: black;
+    }
+    
+
+    /*---------------inscription----------------*/
+
+    .inscription{
+        background-image: url();
+    }
+
+
+    .inscription form{
+        margin: auto; 
+        width: 50%; 
+        padding: 150px; 
+        text-align: center;
+        background-color: rgba(102, 102, 102, 0.102); 
+        margin-top: 50px;
+    }
+
+    .inscription form label{
+        font-size: 20px;
+    }
+
+    .inscription form input{
+        padding: 90px; 
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .inscription form button{
+        padding: 1rem; 
+        border-radius: 10px; 
+        background-color: black; 
+        color: white;
+    }
+
+    .inscription form .oublie a{
+        color: black;
+    }
+
+    .inscription form .compte{
+        margin-top: 5px;
+    }
+
+    .inscription form .compte a{
+        color: black;
+    }
+
+    .inscription form .compte a:hover{
+        color: pink;
+    }
+
+    .inscription form .oublie a:hover{
+        color: pink;
+    }
     
 }
 
