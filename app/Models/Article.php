@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Categorie;
 use App\Models\Souscategorie;
 use App\Models\Collection;
+use App\Models\Articlecommande;
 
 class Article extends Model
 {
@@ -25,5 +26,10 @@ class Article extends Model
     public function collection()
     {
         return $this->belongsTo(Collection::class);
+    }
+
+    public function articles() 
+    { 
+        return $this->hasMany(Articlecommande::class); 
     }
 }
