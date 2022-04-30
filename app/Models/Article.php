@@ -8,6 +8,8 @@ use App\Models\Categorie;
 use App\Models\Souscategorie;
 use App\Models\Collection;
 use App\Models\Articlecommande;
+use App\Models\Commande;
+use App\Models\Favori;
 
 class Article extends Model
 {
@@ -31,5 +33,15 @@ class Article extends Model
     public function articles() 
     { 
         return $this->hasMany(Articlecommande::class); 
+    }
+
+    public function commande()
+    {
+        return $this->belongsTo(Commande::class);
+    }
+
+    public function favori()
+    {
+        return $this->belongsTo(Favori::class);
     }
 }

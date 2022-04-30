@@ -7,10 +7,26 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Commande;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    public function Commande()
+    {
+        return $this->belongsTo(Commande::class);
+    }
+
+    public function commentaires()
+    {
+        return $this->hasMany(Commentaire::class);
+    }
+
+    public function favoris()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     /**
      * The attributes that are mass assignable.
