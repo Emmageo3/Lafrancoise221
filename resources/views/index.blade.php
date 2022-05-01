@@ -80,8 +80,63 @@
     </section>
 
     <div class="latest">
-        <h1>Nouveautés</h1>
+        <div class="latest-title">Nouveautés</div>
+
+        <div class="new-produits box">
+
+
+            @foreach ($souscategories as $souscategorie)
+
+                @foreach ($souscategorie->articles as $article)
+
+                    <div class="new-produit">
+                        <img src="{{ $article->url_img_article }}" alt="">
+                        <div class="text">
+                            <h3>{{ $article->nom_article }}</h3>
+                            <h6>{{ $article->description }}</h6>
+                            <div class="prix">{{ strval($article->prix_article) }} Fcfa</div>
+                        </div>
+
+                    </div>
+
+                @endforeach
+
+            @endforeach
+        </div>
+
+    </div>
+
+
+
+
+    <div class="commentaires">
+        <h1>Avis clients</h1>
         <div class="line"></div>
+
+
+            @foreach ($commentaires as $commentaire)
+                <div class="comment">
+
+                </div>
+                {{ $commentaire->commentaire }}
+
+            @endforeach
+
+    </div>
+
+    <h1 class="sous-title">Voir plus</h1>
+
+    <div class="souscategories">
+
+
+        @foreach ($souscategories as $souscategorie)
+
+            <div class="souscategorie">
+                <p>{{ $souscategorie->libelle }}</p>
+            </div>
+
+
+        @endforeach
     </div>
 
 @include('menus.footer')

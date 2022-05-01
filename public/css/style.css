@@ -7,6 +7,10 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    background-color: rgba(196, 190, 190, 0.03);
+}
+
 a{
     text-decoration: none;
 }
@@ -14,7 +18,7 @@ a{
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     header{
-        background-color: rgba(102, 102, 102, 0.102);
+        background-color: rgba(145, 144, 144, 0.102);
     }
 
     header .logo{
@@ -199,6 +203,7 @@ a{
         margin: 1rem;
         background-color: #ffefda;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 1rem;
     }
 
     .categorie:hover{
@@ -217,8 +222,13 @@ a{
         justify-content: center;
     }
 
-    .latest h1{
-
+    .latest-title{
+        font-weight: bold;
+        font-size: 30px;
+        padding: 10px;
+        background-color: #fffdc8;
+        border-top: 1px solid #cdccab;
+        border-bottom: 1px solid #cdccab;
     }
 
     .latest .line{
@@ -227,6 +237,56 @@ a{
         background-color: aliceblue;
         text-align: center;
     }
+
+    /*----------new products------------*/
+    .new-produits {
+        margin-top: 3rem;
+    }
+
+    .new-produit{
+        margin: 5px;
+    }
+
+    .new-produit img{
+        height: 40rem;
+    }
+
+    .commentaires{
+        margin-top: 3rem;
+    }
+
+    .commentaires h1{
+        text-align: center;
+    }
+
+
+    .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px 2em;
+      }
+
+      .box :first-child {
+          align-self: center;
+      }
+
+
+      .souscategories{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      .souscategorie p{
+          background-color: #cdccab;
+          padding: 10px;
+          margin: 10px;
+          border-radius: 1rem;
+      }
+
+      .sous-title{
+          text-align: center;
+      }
 
 
 

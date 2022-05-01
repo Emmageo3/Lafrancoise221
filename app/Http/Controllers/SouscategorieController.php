@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Article, Souscategorie};
+use App\Models\{Categorie, Souscategorie};
 
-class ArticleController extends Controller
+class SouscategorieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,11 +14,10 @@ class ArticleController extends Controller
      */
     public function index($id = null)
     {
-        $query = $id ? Souscategorie::whereId($id)->firstOrFail()->formations() : Article::query();
-        $articles = Article::paginate(6);
-        $souscategories = Souscategorie::all();
-        return view('index', compact('articles', 'souscategories', 'id'));
-
+        $query = $id ? Categorie::whereId($id)->firstOrFail()->category() : Souscategorie::query();
+        $souscategories = $query->oldest('id')->paginate(5);
+        $categories = Categorie::all();
+        return view('index', compact('souscategories', 'categories', 'id'));
     }
 
     /**

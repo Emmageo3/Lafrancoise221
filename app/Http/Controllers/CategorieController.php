@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Categorie;
+use App\Models\{Categorie, Souscategorie, Article, Commentaire};
 
 class CategorieController extends Controller
 {
@@ -12,10 +12,16 @@ class CategorieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id = null)
     {
         $categories = Categorie::all();
-        return view('index', compact('categories'));
+        $souscategories = Souscategorie::all();
+        $articles = Article::all();
+        $commentaires = Commentaire::all();
+        $query = $id ? Categorie::whereId($id)->firstOrFail()->souscategories() : Categorie::query();
+        return view('index', compact('categories', 'souscategories', 'articles', 'commentaires'));
+
+
     }
 
     /**

@@ -3,22 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Article, Souscategorie};
+use App\Models\Commentaire;
 
-class ArticleController extends Controller
+class CommentaireController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id = null)
+    public function index()
     {
-        $query = $id ? Souscategorie::whereId($id)->firstOrFail()->formations() : Article::query();
-        $articles = Article::paginate(6);
-        $souscategories = Souscategorie::all();
-        return view('index', compact('articles', 'souscategories', 'id'));
-
+        $commentaires = Commentaire::all();
+        return view('index', compact('commentaires'));
     }
 
     /**
