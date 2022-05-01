@@ -10,8 +10,13 @@ class Collection extends Model
 {
     use HasFactory;
 
-    public function favori()
+    public function articles()
     {
-        return $this->belongsTo(Promo::class);
+        return $this->hasMany(Article::class);
+    }
+
+    public function promos()
+    {
+        return $this->hasMany(Promo::class);
     }
 }

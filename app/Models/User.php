@@ -13,9 +13,9 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    public function Commande()
+    public function commandes()
     {
-        return $this->belongsTo(Commande::class);
+        return $this->hasMany(Commande::class);
     }
 
     public function commentaires()
@@ -25,7 +25,7 @@ class User extends Authenticatable
 
     public function favoris()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Favori::class);
     }
 
     /**

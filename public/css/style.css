@@ -16,7 +16,7 @@ a{
     header{
         background-color: rgba(102, 102, 102, 0.102);
     }
-    
+
     header .logo{
         text-align: center;
         font-size: 30px;
@@ -84,11 +84,11 @@ a{
 
 
     .connexion form{
-        margin: auto; 
-        width: 50%; 
-        padding: 150px; 
+        margin: auto;
+        width: 50%;
+        padding: 150px;
         text-align: center;
-        background-color: rgba(102, 102, 102, 0.102); 
+        background-color: rgba(102, 102, 102, 0.102);
         margin-top: 50px;
     }
 
@@ -97,17 +97,17 @@ a{
     }
 
     .connexion form input{
-        padding: 90px; 
-        padding-top: 10px; 
-        padding-bottom: 10px; 
+        padding: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         margin-bottom: 2rem;
         text-align: center;
     }
 
     .connexion form button{
-        padding: 1rem; 
-        border-radius: 10px; 
-        background-color: black; 
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: black;
         color: white;
     }
 
@@ -126,7 +126,7 @@ a{
     .connexion form .inexistant a{
         color: black;
     }
-    
+
 
     /*---------------inscription----------------*/
 
@@ -136,11 +136,11 @@ a{
 
 
     .inscription form{
-        margin: auto; 
-        width: 50%; 
-        padding: 150px; 
+        margin: auto;
+        width: 50%;
+        padding: 150px;
         text-align: center;
-        background-color: rgba(102, 102, 102, 0.102); 
+        background-color: rgba(102, 102, 102, 0.102);
         margin-top: 50px;
     }
 
@@ -149,17 +149,17 @@ a{
     }
 
     .inscription form input{
-        padding: 90px; 
-        padding-top: 10px; 
-        padding-bottom: 10px; 
+        padding: 90px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         margin-bottom: 2rem;
         text-align: center;
     }
 
     .inscription form button{
-        padding: 1rem; 
-        border-radius: 10px; 
-        background-color: black; 
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: black;
         color: white;
     }
 
@@ -182,12 +182,59 @@ a{
     .inscription form .oublie a:hover{
         color: pink;
     }
-    
+
+    /*----------categories---------------*/
+
+    .categories{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .categorie{
+        padding: 7rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin: 1rem;
+        background-color: #ffefda;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .categorie:hover{
+        background-color: pink;
+        transition: 0.2s ease-in-out;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+
+    /*------nouveautes-----*/
+
+    .latest{
+        margin-top: 4rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .latest h1{
+
+    }
+
+    .latest .line{
+        width: 10rem;
+        height: 5px;
+        background-color: aliceblue;
+        text-align: center;
+    }
+
+
+
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-    
+
     header{
         background-color: rgba(102, 102, 102, 0.102);
         height: 5rem;
@@ -246,5 +293,5 @@ a{
         background-color: black;
     }
 
-    
+
 }

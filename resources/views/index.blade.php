@@ -29,18 +29,15 @@
                 <li>
                     <a href="">Nouveautés</a>
                 </li>
+                @foreach ($categories as $categorie)
+
                 <li>
-                    <a href="">Hommes</a>
+                    <a href="">
+                        {{ $categorie->libelle }}
+                    </a>
                 </li>
-                <li>
-                    <a href="">Femmes</a>
-                </li>
-                <li>
-                    <a href="">Enfants</a>
-                </li>
-                <li>
-                    <a href="">Accessoires</a>
-                </li>
+
+                @endforeach
                 <li>
                     <a href="">A propos</a>
                 </li>
@@ -64,3 +61,29 @@
             </a>
         </div>
     </div>
+
+    <div class="banniere">
+
+    </div>
+
+
+    <section class="categories">
+
+        @foreach ($categories as $categorie)
+
+            <div class="categorie">
+                <h2>{{ $categorie->libelle }}</h2>
+            </div>
+
+        @endforeach
+
+    </section>
+
+    <div class="latest">
+        <h1>Nouveautés</h1>
+        <div class="line"></div>
+    </div>
+
+@include('menus.footer')
+
+
